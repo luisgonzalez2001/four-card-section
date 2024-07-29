@@ -21,4 +21,136 @@ html {
 
 body {
     font-size: 1.5rem;
+    background-color: var(--very-light-gray);
+}
+
+.main-title-container {
+    width: 100%;
+    max-width: 500px;
+    min-width: 370px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.main-subtitle {
+    font-size: 2.0rem;
+    font-weight: 200;
+    color: var(--very-dark-blue);
+    margin-top: 60px;
+}
+
+.main-title {
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+.main-info {
+    margin-top: 2rem;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.main-cards-container {
+    width: 80%;
+    min-width: 288px;
+    max-width: 920px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+.card-container {
+    position: relative;
+    display: inline-block;
+    width: 288px;
+    height: 250px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 4px 8px var(--grayish-blue);
+}
+
+.card-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-container p {
+    font-weight: 200;
+    color: var(--grayish-blue);
+    line-height: 1.5ren;
+    margin-top: 5px;
+}
+
+.card-container span {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-container--supervisor {
+    border-top: 4px solid var(--cyan);
+}
+
+.card-container--team-builder {
+    border-top: 4px solid var(--red);
+}
+
+.card-container--karma {
+    border-top: 4px solid var(--orange);
+}
+
+.card-container--calculator {
+    border-top: 4px solid var(--blue);
+}
+
+.icon-supervisor {
+    background-image: url(./images/icon-supervisor.svg);
+}
+
+.icon-team-builder {
+    background-image: url(./images/icon-team-builder.svg);
+}
+
+.icon-karma {
+    background-image: url(./images/icon-karma.svg);
+}
+
+.icon-calculator {
+    background-image: url(./images/icon-calculator.svg);
+}
+
+@media (min-width: 750px){
+    .main-cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1100px){
+    .main-cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card-container--supervisor {
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    .card-container--calculator {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
 }
